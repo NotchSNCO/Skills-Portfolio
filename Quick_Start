@@ -1,0 +1,377 @@
+# Quick Start Guide
+
+## 🚀 Getting Started
+
+### Prerequisites Installation
+
+```bash
+# 1. Install AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# 2. Install Terraform
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+# 3. Install Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+
+# 4. Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+# 5. Install Minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# 6. Install security scanning tools
+pip install checkov --break-system-packages
+wget https://github.com/aquasecurity/trivy/releases/download/v0.48.0/trivy_0.48.0_Linux-64bit.deb
+sudo dpkg -i trivy_0.48.0_Linux-64bit.deb
+
+# Verify installations
+aws --version
+terraform version
+docker --version
+kubectl version --client
+minikube version
+checkov --version
+trivy --version
+```
+
+### AWS Account Setup (Day 1)
+
+```bash
+# Configure AWS CLI
+aws configure --profile admin
+# Enter your Access Key ID
+# Enter your Secret Access Key
+# Default region: us-east-1
+# Default output: json
+
+# Verify access
+aws sts get-caller-identity --profile admin
+```
+
+### Project Structure
+
+```
+cloud-security-upskill-portfolio/
+├── README.md                          # Main portfolio overview
+├── QUICK_START.md                     # This file
+├── week-01-aws-security/              # AWS security baseline
+│   ├── README.md                      # Week 1 guide
+│   ├── day1-2-baseline-documentation.md
+│   ├── day3-4-iam-architecture.md
+│   ├── incident-response-playbook.md
+│   └── security-operations-procedures.md
+├── week-02-terraform-iac/             # Infrastructure as Code
+│   ├── README.md
+│   ├── main.tf
+│   ├── modules/
+│   └── examples/
+├── week-03-docker-security/           # Container security
+│   ├── README.md
+│   ├── Dockerfile.secure
+│   └── docker-compose.yml
+├── week-04-kubernetes-security/       # K8s security
+│   ├── README.md
+│   ├── manifests/
+│   └── policies/
+├── week-05-cicd-security/             # DevSecOps pipeline
+│   ├── README.md
+│   ├── .github/workflows/
+│   └── security-gates/
+├── week-06-eks-cloud-native/          # AWS EKS
+│   ├── README.md
+│   └── eks-config/
+├── week-07-advanced-patterns/         # Advanced topics
+│   ├── README.md
+│   └── service-mesh/
+└── week-08-capstone/                  # Final project
+    ├── README.md
+    └── architecture/
+```
+
+## 📅 Weekly Schedule
+
+### Time Allocation
+
+**Weekdays** (Monday-Friday):
+- Morning: 2-3 hours (before/after work)
+- Evening: 1-2 hours  
+- Daily total: 3-5 hours
+
+**Weekends** (Saturday-Sunday):
+- 5-6 hours each day
+
+**Weekly total**: 20-30 hours
+
+### Milestone Checklist
+
+#### Week 1: AWS Security ✅
+- [ ] AWS account secured
+- [ ] CloudTrail, GuardDuty, Security Hub enabled
+- [ ] IAM least privilege implemented
+- [ ] Security automation Lambda deployed
+- [ ] Incident response playbook created
+
+#### Week 2: Terraform ✅
+- [ ] Terraform installed and configured
+- [ ] Week 1 resources converted to IaC
+- [ ] Security modules created (S3, VPC, IAM)
+- [ ] IaC security scanning implemented
+- [ ] Terraform best practices documented
+
+#### Week 3: Docker Security ✅
+- [ ] Docker installed
+- [ ] Secure container images built
+- [ ] Image scanning with Trivy
+- [ ] Runtime security with Falco
+- [ ] Docker security benchmarks applied
+
+#### Week 4: Kubernetes Security ✅
+- [ ] Minikube cluster deployed
+- [ ] RBAC configured
+- [ ] Network policies implemented
+- [ ] Pod security standards applied
+- [ ] K8s security scanning (kube-bench, kubescape)
+
+#### Week 5: CI/CD Security ✅
+- [ ] GitHub Actions pipeline created
+- [ ] SAST/SCA/Container scanning integrated
+- [ ] Security gates implemented
+- [ ] Supply chain security (SBOM, signing)
+- [ ] Pipeline security documented
+
+#### Week 6: AWS EKS ✅
+- [ ] EKS cluster deployed with Terraform
+- [ ] EKS security best practices applied
+- [ ] Pod IAM roles (IRSA) configured
+- [ ] Monitoring and logging set up
+- [ ] EKS security baseline documented
+
+#### Week 7: Advanced Patterns ✅
+- [ ] Service mesh security (Istio/Linkerd)
+- [ ] Secrets management (Vault)
+- [ ] Policy as code (OPA)
+- [ ] Compliance automation
+- [ ] Zero trust architecture
+
+#### Week 8: Capstone & Certification ✅
+- [ ] End-to-end secure application deployed
+- [ ] Complete portfolio documentation
+- [ ] AWS Security Specialty exam scheduled
+- [ ] GitHub portfolio published
+- [ ] LinkedIn profile updated
+
+## 💡 Daily Routine
+
+### Morning Routine (30 minutes)
+1. Review previous day's work
+2. Read AWS security blog or documentation
+3. Plan today's tasks
+4. Set up environment
+
+### Hands-On Work (2-4 hours)
+1. Follow week's README step-by-step
+2. Execute commands and verify results
+3. Document findings and learnings
+4. Commit code to GitHub
+
+### Evening Review (30 minutes)
+1. Document what you learned
+2. Update progress tracker
+3. Identify blockers or questions
+4. Plan tomorrow's tasks
+
+## 📚 Learning Resources
+
+### Essential Documentation
+- [AWS Security Best Practices](https://docs.aws.amazon.com/security/)
+- [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [Kubernetes Security](https://kubernetes.io/docs/concepts/security/)
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+
+### Video Courses (Free)
+- AWS Skill Builder - Security Learning Plan
+- freeCodeCamp - AWS Security
+- TechWorld with Nana - Kubernetes & Docker
+
+### Practice Platforms
+- AWS Free Tier
+- TryHackMe - Cloud Security Paths
+- HackTheBox - Cloud Labs
+
+### Community
+- AWS Security subreddit: r/aws
+- Cloud Security Alliance
+- DevSecOps Slack communities
+
+## 🎯 Success Tips
+
+### 1. Commit Daily
+```bash
+# Daily commit routine
+git add .
+git commit -m "Week X Day Y: [What you accomplished]"
+git push origin main
+```
+
+### 2. Document Everything
+- Take screenshots of dashboards
+- Save command outputs
+- Write notes in Markdown
+- Explain concepts in your own words
+
+### 3. Build in Public
+- Share progress on LinkedIn
+- Write blog posts about learnings
+- Help others in communities
+- Ask questions when stuck
+
+### 4. Manage Costs
+```bash
+# Daily AWS cost check
+aws ce get-cost-and-usage \
+    --time-period Start=2025-02-01,End=2025-02-10 \
+    --granularity DAILY \
+    --metrics "UnblendedCost" \
+    --profile admin
+
+# Set billing alerts at $10, $50, $100
+```
+
+### 5. Stay Organized
+- Use GitHub Projects to track tasks
+- Create weekly retrospectives
+- Update README with progress
+- Maintain a learning journal
+
+## 🚨 Troubleshooting
+
+### AWS CLI Issues
+```bash
+# Reset AWS config
+aws configure list-profiles
+aws configure --profile admin
+
+# Check credentials
+aws sts get-caller-identity --profile admin
+```
+
+### Terraform Issues
+```bash
+# Reset Terraform state
+rm -rf .terraform*
+terraform init
+
+# Debug mode
+TF_LOG=DEBUG terraform apply
+```
+
+### Docker Issues
+```bash
+# Check Docker daemon
+sudo systemctl status docker
+sudo systemctl restart docker
+
+# Clean up
+docker system prune -a
+```
+
+### Kubernetes Issues
+```bash
+# Reset Minikube
+minikube delete
+minikube start
+
+# Check cluster
+kubectl cluster-info
+kubectl get nodes
+```
+
+## 📞 Getting Help
+
+### When Stuck
+1. Check the specific week's README
+2. Search AWS/Terraform documentation
+3. Look for error messages on Stack Overflow
+4. Ask in relevant Slack/Discord communities
+5. Create GitHub issue in your repo for tracking
+
+### Resources
+- AWS Support (if using paid tier)
+- HashiCorp Community Forum
+- Kubernetes Slack
+- Cloud Security Alliance
+
+## 🎓 Certification Preparation
+
+### AWS Certified Security - Specialty
+
+**Study Plan (Weeks 7-10)**:
+1. Complete AWS Skill Builder path
+2. Take practice exams (Tutorials Dojo)
+3. Review weak areas
+4. Schedule exam
+
+**Topics**:
+- Identity and Access Management
+- Infrastructure Security
+- Data Protection
+- Incident Response
+- Compliance and Governance
+
+**Resources**:
+- AWS Whitepapers
+- FAQs for all security services
+- Hands-on labs from this program
+
+### CKS (Certified Kubernetes Security Specialist)
+
+**Study Plan (Weeks 10-12)**:
+1. Complete killer.sh practice exams
+2. Review Linux Academy CKS course
+3. Practice hands-on scenarios
+4. Schedule exam
+
+## 🏁 Final Checklist Before Starting
+
+- [ ] AWS account created and secured
+- [ ] GitHub account ready
+- [ ] All tools installed (AWS CLI, Terraform, Docker, kubectl)
+- [ ] Development environment set up (VS Code, Git)
+- [ ] Calendar blocked for study time
+- [ ] Budget allocated ($100-200)
+- [ ] Learning journal created
+- [ ] LinkedIn ready for updates
+
+## 🚀 Ready to Start?
+
+```bash
+# Clone this repository
+git clone https://github.com/YOUR_USERNAME/cloud-security-upskill-portfolio.git
+cd cloud-security-upskill-portfolio
+
+# Start with Week 1
+cd week-01-aws-security
+cat README.md  # Read the guide
+
+# Let's go! 🎯
+```
+
+---
+
+**Remember**: 
+- Quality > Speed
+- Document everything
+- Ask questions
+- Build in public
+- Stay consistent
+
+**Good luck on your upskilling journey! 🚀**
