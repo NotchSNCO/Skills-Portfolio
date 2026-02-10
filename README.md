@@ -1,4 +1,243 @@
-# Skills-Portfolio
+# Cloud Security Engineer Upskilling Portfolio
+
+> **8-Week Intensive Training Program**: AWS Cloud Security, Container Security, Kubernetes, DevSecOps, and Infrastructure as Code
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](YOUR_LINKEDIN_URL)
+[![Certifications](https://img.shields.io/badge/Certs-Security%2B%20%7C%20FEDRAMP-green)]()
+[![AWS](https://img.shields.io/badge/AWS-Security%20Specialist-orange)]()
+
+---
+
+## 🎯 Program Overview
+
+**Background**: 15+ years cybersecurity experience (Military, Cisco, Mandiant) | Security+ Certified | FedRAMP/RMF Expert
+
+**Goal**: Transition expertise to cloud-native application security with hands-on AWS, Kubernetes, and DevSecOps capabilities
+
+**Timeline**: 8 weeks (20-30 hours/week)
+
+**Target Role**: Application Security Engineer (Cloud/Container Security)
+
+---
+
+## 📚 Learning Path
+
+### Phase 1: Cloud Security Foundations (Weeks 1-2)
+- [Week 1: AWS Security Deep Dive](./week-01-aws-security/README.md)
+- [Week 2: Infrastructure as Code with Terraform](./week-02-terraform-iac/README.md)
+
+### Phase 2: Container & Kubernetes Security (Weeks 3-4)
+- [Week 3: Docker Security](./week-03-docker-security/README.md)
+- [Week 4: Kubernetes Security](./week-04-kubernetes-security/README.md)
+
+### Phase 3: DevSecOps & Cloud-Native (Weeks 5-6)
+- [Week 5: CI/CD Pipeline Security](./week-05-cicd-security/README.md)
+- [Week 6: AWS EKS & Cloud-Native Security](./week-06-eks-cloud-native/README.md)
+
+### Phase 4: Advanced & Certification (Weeks 7-8)
+- [Week 7: Advanced Security Patterns](./week-07-advanced-patterns/README.md)
+- [Week 8: Capstone Project & Certification](./week-08-capstone/README.md)
+
+---
+
+## 🛠️ Technical Stack
+
+**Cloud Platform**
+- AWS (IAM, VPC, EKS, Security Hub, GuardDuty, CloudTrail, KMS, Secrets Manager)
+
+**Infrastructure as Code**
+- Terraform
+- CloudFormation (supplementary)
+
+**Container & Orchestration**
+- Docker
+- Kubernetes (Minikube, EKS)
+- Helm
+
+**Security Tools**
+- **IaC Scanning**: Checkov, tfsec, Terrascan
+- **Container Scanning**: Trivy, Anchore, Clair
+- **SAST**: Semgrep, SonarQube
+- **DAST**: OWASP ZAP
+- **Runtime Security**: Falco, AppArmor
+- **K8s Security**: kube-bench, kube-hunter, Polaris, kubescape
+- **Policy as Code**: OPA (Open Policy Agent)
+
+**CI/CD**
+- GitHub Actions
+- GitLab CI (alternative)
+
+**Monitoring & Logging**
+- CloudWatch
+- Prometheus
+- Grafana
+- FluentBit
+
+---
+
+## 📊 Progress Tracker
+
+| Week | Focus Area | Status | Completion Date |
+|------|-----------|--------|-----------------|
+| 1 | AWS Security Fundamentals | ⬜ Not Started | - |
+| 2 | Terraform IaC | ⬜ Not Started | - |
+| 3 | Docker Security | ⬜ Not Started | - |
+| 4 | Kubernetes Security | ⬜ Not Started | - |
+| 5 | CI/CD Security | ⬜ Not Started | - |
+| 6 | EKS & Cloud-Native | ⬜ Not Started | - |
+| 7 | Advanced Patterns | ⬜ Not Started | - |
+| 8 | Capstone & Cert Prep | ⬜ Not Started | - |
+
+**Update status**: ⬜ Not Started | 🟡 In Progress | ✅ Completed
+
+---
+
+## 🏆 Key Deliverables
+
+### Portfolio Projects
+1. **Secure AWS Landing Zone** - Multi-account architecture with security baseline
+2. **Terraform Security Modules** - Reusable, security-hardened infrastructure modules
+3. **Containerized Application Security** - End-to-end secured microservices
+4. **DevSecOps Pipeline** - Full CI/CD with integrated security gates
+5. **EKS Production Architecture** - Production-ready Kubernetes cluster with security controls
+6. **Capstone: Cloud-Native Secure Application** - Complete reference architecture
+
+### Documentation
+- Security architecture diagrams
+- Compliance mapping (FedRAMP/NIST 800-53)
+- Incident response playbooks
+- Security standards and procedures
+- Technical implementation guides
+
+### Certifications (Target)
+- ✅ CompTIA Security+ (Completed)
+- 🎯 AWS Certified Security - Specialty (Target: Week 8-10)
+- 🎯 Certified Kubernetes Security Specialist (CKS) (Target: Week 12)
+- 🎯 HashiCorp Terraform Associate (Target: Week 10)
+
+---
+
+## 💰 Budget & Resources
+
+**Estimated Cost**: $100-200 for 8 weeks
+
+| Resource | Cost | Notes |
+|----------|------|-------|
+| AWS Free Tier | $0-50/month | Stay within limits; EKS = $72/month |
+| TryHackMe | $10/month | Cloud security learning paths |
+| Practice Exams | $20-30 | Tutorials Dojo, Whizlabs |
+| Books (optional) | $40-60 | Container Security, K8s Security |
+
+**Free Resources**:
+- AWS Skill Builder
+- HashiCorp Learn
+- Kubernetes Documentation
+- OWASP Resources
+- GitHub (free for public repos)
+
+---
+
+## 📖 Learning Resources
+
+### Online Platforms
+- [AWS Skill Builder](https://skillbuilder.aws/) - Free tier
+- [HashiCorp Learn](https://learn.hashicorp.com/) - Terraform courses
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+- [TryHackMe](https://tryhackme.com/) - Cloud penetration testing
+
+### Books
+- "Container Security" by Liz Rice
+- "Kubernetes Security" by Liz Rice & Michael Hausenblas  
+- "AWS Security" by Dylan Shield
+- "Terraform: Up & Running" by Yevgeniy Brikman
+
+### YouTube Channels
+- freeCodeCamp - AWS Security
+- TechWorld with Nana - Kubernetes & DevOps
+- HackerSploit - DevSecOps
+
+### GitHub Resources
+- [aws-samples](https://github.com/aws-samples) - AWS security samples
+- [terraform-aws-modules](https://github.com/terraform-aws-modules) - Terraform modules
+- [kubernetes/examples](https://github.com/kubernetes/examples) - K8s examples
+
+---
+
+## 🎓 Prerequisites
+
+**Knowledge**:
+- ✅ Cybersecurity fundamentals (15+ years experience)
+- ✅ Security+ certification
+- ✅ FedRAMP/RMF frameworks
+- ✅ Linux command line
+- 🟡 Basic Python/scripting (helpful but not required)
+- 🟡 Basic networking (TCP/IP, DNS, firewalls)
+
+**Tools to Install** (Week 1):
+- AWS CLI
+- Terraform
+- Docker Desktop
+- kubectl
+- Git
+- VS Code (or preferred IDE)
+- Minikube/kind
+
+---
+
+## 📝 Weekly Time Commitment
+
+- **Weekdays**: 2-3 hours/day (study + hands-on labs)
+- **Weekends**: 5-6 hours/day (projects + deeper dives)
+- **Total**: 20-30 hours/week
+
+**Flexibility**: Adjust based on your schedule. The content is structured to be completed in 8 weeks with dedicated time, but can be extended if needed.
+
+---
+
+## 🚀 Getting Started
+
+1. **Fork this repository** to your own GitHub account
+2. **Clone locally**: `git clone https://github.com/YOUR_USERNAME/cloud-security-upskill-portfolio.git`
+3. **Set up AWS account** (if you don't have one)
+4. **Install prerequisites** (see Week 1, Day 1)
+5. **Start with Week 1** and follow the daily guides
+6. **Update progress** in this README as you complete each week
+7. **Commit your work** regularly to demonstrate continuous learning
+
+---
+
+## 📬 Contact & Networking
+
+- **LinkedIn**: [Your Profile](YOUR_LINKEDIN_URL)
+- **Email**: your.email@example.com
+- **Blog**: [Optional - Medium/Dev.to](YOUR_BLOG_URL)
+
+---
+
+## 📄 License
+
+This learning portfolio is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- AWS for comprehensive documentation and free tier
+- HashiCorp for Terraform learning resources
+- Kubernetes community for excellent documentation
+- OWASP for security tools and guidance
+- Cloud security community for shared knowledge
+
+---
+
+**Last Updated**: [Current Date]
+
+**Status**: Week X - [Current Focus]
+
+---
+
+> 💡 **Tip**: Star this repo to track progress and share with others on similar learning journeys!
+
 # Week 1: AWS Security Deep Dive
 
 > **Goal**: Translate cybersecurity expertise to AWS-specific implementations and build a secure baseline
